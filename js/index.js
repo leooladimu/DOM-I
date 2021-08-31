@@ -37,6 +37,11 @@ const siteContent = {
   },
 };
 
+const links = document.querySelectorAll('nav a');
+links.forEach(link => console.log(link.textContent));
+const linksArray = Array.from(links);
+const foundLink = linksArray.find(link => link.textContent === 'Services');
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
